@@ -1,0 +1,22 @@
+@import "../styles/colors.scss";
+@import "../styles/fonts.scss";
+
+h1 {
+  font-family: $header;
+}
+
+h5 {
+  font-family: $subheader;
+}
+
+p {
+  font-family: $paragraph;
+}
+
+p,
+h1,
+h5 {
+  color: $color-black;
+  margin: 0px;
+  padding: 0px;
+}
