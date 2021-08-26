@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Spacer } from "../components/Spacer";
 import { Typography } from "../components/Typography";
 import useOnClickOutside from "use-onclickoutside";
-import { ArtInfo } from "../artInfo/artInfo";
+import { ArtInfo } from "../information/artInfo";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import { useScreen } from "../hooks/useScreen";
@@ -76,16 +76,12 @@ export const Art = () => {
       )}
       <div style={{ width: isSmall ? "100%" : "75%" }}>
         <Typography type="header" style={{ fontWeight: 500 }}>
-          Exploration in Design
+          {ArtInfo.header}
         </Typography>
-        <Typography type="paragraph">
-          Design has become a form of rest and exploration in my life as well.
-          When I'm not a designer at work, I am a designer at rest, using what
-          I've learned to explore new dimensions of design.
-        </Typography>
+        <Typography type="paragraph">{ArtInfo.subheader}</Typography>
         <Spacer />
         <Grid spacing={isSmall ? 3 : 6} container>
-          {ArtInfo.map(({ image, title, id }) => (
+          {ArtInfo.art.map(({ image, title, id }) => (
             <Grid xs={isSmall ? 12 : 4} key={id} item>
               <ArtItem
                 image={image}
